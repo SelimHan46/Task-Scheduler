@@ -1,0 +1,14 @@
+../Core/Src/main.c:84:6:Clock_Task	4	static
+../Core/Src/main.c:105:6:IO_Debounce_Control	24	static
+../Core/Src/main.c:138:6:Stop_Uart_Message	8	static
+../Core/Src/main.c:144:6:UART_Send_Message	16	static
+../Core/Src/main.c:157:6:Task1_Control	16	static
+../Core/Src/main.c:163:6:Task2_Control	72	static
+../Core/Src/main.c:173:6:Task3_Control	16	static
+../Core/Src/main.c:179:6:Task4_Control	16	static
+../Core/Src/main.c:192:5:main	16	static
+../Core/Src/main.c:268:6:SystemClock_Config	88	static
+../Core/Src/main.c:314:13:MX_TIM2_Init	32	static
+../Core/Src/main.c:359:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:392:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:420:6:Error_Handler	4	static,ignoring_inline_asm

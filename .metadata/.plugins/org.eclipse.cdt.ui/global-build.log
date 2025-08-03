@@ -1,0 +1,30 @@
+05:27:51 **** Incremental Build of configuration Debug for project Tick_Timer_Library ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Users/90543/Desktop/stm32_software-based timer architecture task scheduler/Tick_Timer_Library/Core/Tick_Timer_Driver/Inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Task2_Control':
+../Core/Src/main.c:168:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  168 |  sprintf(buffer, "Zaman: %d:%d:%d: \r\n", hour, minute, second);
+      |  ^~~~~~~
+../Core/Src/main.c:168:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include "tick_timer_driver.h"
+  +++ |+#include <stdio.h>
+   26 | 
+arm-none-eabi-gcc -o "Tick_Timer_Library.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\90543\Desktop\stm32_software-based timer architecture task scheduler\Tick_Timer_Library\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tick_Timer_Library.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tick_Timer_Library.elf
+ 
+arm-none-eabi-size   Tick_Timer_Library.elf 
+arm-none-eabi-objdump -h -S  Tick_Timer_Library.elf  > "Tick_Timer_Library.list"
+   text	   data	    bss	    dec	    hex	filename
+  14368	    120	   1840	  16328	   3fc8	Tick_Timer_Library.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tick_Timer_Library.list
+ 
+05:27:53 **** Incremental Build of configuration Debug for project Tick_Timer_Library ****
+make -j8 all 
+arm-none-eabi-size   Tick_Timer_Library.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14368	    120	   1840	  16328	   3fc8	Tick_Timer_Library.elf
+Finished building: default.size.stdout
+ 

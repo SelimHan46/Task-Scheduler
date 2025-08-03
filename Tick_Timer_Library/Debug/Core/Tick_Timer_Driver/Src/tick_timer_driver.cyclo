@@ -1,0 +1,9 @@
+tick_timer_driver.c:13:6:Tick_Timer_Init	2
+tick_timer_driver.c:24:6:Tick_Timer_Create	2
+tick_timer_driver.c:38:6:Tick_Timer_Start	1
+tick_timer_driver.c:46:6:Tick_Timer_Stop	1
+tick_timer_driver.c:51:6:Tick_Timer_Reset	1
+tick_timer_driver.c:57:6:Tick_Timer_Update_Period	1
+tick_timer_driver.c:63:10:Tick_Timer_Get_Tick	1
+tick_timer_driver.c:68:6:Tick_Timer_Check_Elapsed_Time	5
+tick_timer_driver.c:100:6:HAL_TIM_PeriodElapsedCallback	2

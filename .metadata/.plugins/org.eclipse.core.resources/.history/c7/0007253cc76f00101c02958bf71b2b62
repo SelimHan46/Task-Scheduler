@@ -1,0 +1,39 @@
+/*
+ * tick_timer_driver.c
+ *
+ *  Created on: Aug 2, 2025
+ *      Author:
+ */
+
+#include "tick_timer_driver.h"
+
+bool Tick_Timer_Init(TIM_HandleTypeDef *htim2)
+{
+	if (HAL_TIM_Base_Start_IT(htim) == HAL_OK)
+	{
+		return true;
+	}
+
+	return false;
+}
+bool Tick_Timer_Create(Software_Timer_t *softwareTimer, uint32_t periodMs, Timer_Type_t timerType, Timer_Callback_t callback)
+{
+	if(softwareTimer->timerInfo.active !=  true)
+	{
+		softwareTimer->timerType 				  = timerType;
+		softwareTimer->timerInfo.startMs 		  = Tick_Timer_Get_Tick();
+		softwareTimer->timerInfo.periodMs		  = periodMs;
+		softwareTimer->timerInfo.periodMs 		  = periodMs;
+		softwareTimer->timerInfo.remainingMs	  = periodMs;
+		softwareTimer->timerCallback              = callback;
+		return true;
+	}
+
+	return false;
+}
+void Tick_Timer_Start(Software_Timer_t *softwareTimer);
+void Tick_Timer_Stop(Software_Timer_t *softwareTimer);
+void Tick_Timer_Reset(Software_Timer_t *softwareTimer);
+void Tick_Timer_Update_Period(Software_Timer_t *softwareTimer, uint32_t newPeriodMs);
+uint32_t Tick_Timer_Get_Tick(void);
+bool Tick_Timer_Check_Elepsed_Time(Software_Timer_t *softwareTimer);

@@ -1,0 +1,13 @@
+/*
+ * tick_timer_driver.h
+ *
+ *  Created on: Aug 2, 2025
+ *      Author:
+ */
+
+#ifndef TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_
+#define TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_
+
+
+
+#endif /* TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_ */

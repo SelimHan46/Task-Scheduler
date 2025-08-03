@@ -1,0 +1,14 @@
+main.c:84:6:Clock_Task	4
+main.c:105:6:IO_Debounce_Control	6
+main.c:138:6:Stop_Uart_Message	1
+main.c:144:6:UART_Send_Message	2
+main.c:157:6:Task1_Control	1
+main.c:163:6:Task2_Control	1
+main.c:173:6:Task3_Control	1
+main.c:179:6:Task4_Control	1
+main.c:192:5:main	2
+main.c:268:6:SystemClock_Config	3
+main.c:314:13:MX_TIM2_Init	4
+main.c:359:13:MX_USART2_UART_Init	2
+main.c:392:13:MX_GPIO_Init	1
+main.c:420:6:Error_Handler	1

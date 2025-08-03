@@ -1,0 +1,9 @@
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:13:6:Tick_Timer_Init	16	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:24:6:Tick_Timer_Create	24	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:38:6:Tick_Timer_Start	16	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:46:6:Tick_Timer_Stop	16	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:51:6:Tick_Timer_Reset	16	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:57:6:Tick_Timer_Update_Period	16	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:63:10:Tick_Timer_Get_Tick	4	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:68:6:Tick_Timer_Check_Elapsed_Time	24	static
+../Core/Tick_Timer_Driver/Src/tick_timer_driver.c:100:6:HAL_TIM_PeriodElapsedCallback	16	static

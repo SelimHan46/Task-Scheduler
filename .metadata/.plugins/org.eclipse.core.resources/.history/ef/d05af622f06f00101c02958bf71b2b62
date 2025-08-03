@@ -1,0 +1,47 @@
+/*
+ * tick_timer_driver.h
+ *
+ *  Created on: Aug 2, 2025
+ *      Author:
+ */
+
+#ifndef TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_
+#define TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_
+
+#include "main.h"
+#include "stdbool.h"
+
+typedef enum{
+	TIMER_TYPE_ONESHOT,
+	TIMER_TYPE_PERIODIC
+}Timer_Type_t;
+
+typedef void (*Timer_Callback_t) (void);
+
+typedef struct{
+	uint32_t 			startMs;      // mS cinsinden başlangıç
+	uint32_t 			periodMs;     // mS cinsinden timer periyodu
+	uint32_t 			remainingMs;  // mS cinsinden timer'ın tamamlanması için kalan süre
+	bool     			active;       // timer'ın çalışma durumunu veren bilgi
+}Timer_Info_t;
+
+typedef struct{
+	Timer_Type_t 		timerType;
+	Timer_Info_t 		timerInfo;
+	Timer_Callback_t 	timerCallback;
+}Software_Timer_t;
+
+/*
+ * Fonksiyon Protipleri | Fonksiyon API'leri
+ */
+
+bool Tick_Timer_Init(TIM_HandleTypeDef *htim2);
+bool Tick_Timer_Create(Software_Timer_t *softwareTimer, uint32_t periodMs, Timer_Type_t timerType, Timer_Callback_t callback);
+void Tick_Timer_Start(Software_Timer_t *softwareTimer);
+void Tick_Timer_Stop(Software_Timer_t *softwareTimer);
+void Tick_Timer_Reset(Software_Timer_t *softwareTimer);
+void Tick_Timer_Update_Period(Software_Timer_t *softwareTimer, uint32_t newPeriodMs);
+uint32_t Tick_Timer_Get_Tick(void);
+bool Tick_Timer_Check_Elapsed_Time(Software_Timer_t *softwareTimer);
+
+#endif /* TICK_TIMER_DRIVER_INC_TICK_TIMER_DRIVER_H_ */
