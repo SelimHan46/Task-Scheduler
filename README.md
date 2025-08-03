@@ -15,3 +15,5 @@ Task execution monitoring via UART
 Support for periodic and one-shot timers
 
 Software timer usage for debounce operations
+
+![image_alt](https://github.com/SelimHan46/Task-Scheduler/blob/d96ed2115c25ff435f044c1bc0be7f5cfba10dfd/Task_Scheduler.png)
