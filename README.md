@@ -5,8 +5,13 @@ running at different periods and verifies their correct timing through UART outp
 
 # Features
 Software timer API developed from scratch
+
 Custom-designed multi-task scheduling algorithm
+
 4 tasks running at different periods (500ms, 1s, 2s, 5s)
+
 Task execution monitoring via UART
+
 Support for periodic and one-shot timers
+
 Software timer usage for debounce operations
